@@ -214,6 +214,13 @@ MiG_31 = {
 							deviation_angle = 30,
 							velocity_loss_factor = 0.5
 						},
+						rebound_object = {
+							angle0 = 50,
+							angle100 = 75,
+							cx_factor = 5,
+							deviation_angle = 30,
+							velocity_loss_factor = 0.5
+						},
 						rebound_water = {
 							angle0 = 65,
 							angle100 = 83,
@@ -429,6 +436,10 @@ MiG_31 = {
 			Name = "Fighter Sweep",
 			OldID = "Fighter Sweep",
 			WorldID = 19
+		}, {
+			Name = "Intercept",
+			OldID = "Intercept",
+			WorldID = 10
 		}, },
 	V_land = 72,
 	V_max_h = 833.33,
@@ -515,6 +526,14 @@ MiG_31 = {
 						exposure = { { 0, 0.79, 0.81 } },
 						movable = true,
 						power_up_t = 1.25,
+						proto = {
+							angle_change_rate = 0.05235987755983,
+							angle_max = 0.20943951023932,
+							angle_min = 0.13962634015955,
+							color = { 255, 201, 125, 0.40347331922021 },
+							power_up_t = 3.22,
+							range = 6480
+						},
 						typename = "Spot"
 					} },
 				typename = "Collection"
