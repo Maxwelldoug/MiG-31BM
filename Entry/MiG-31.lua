@@ -592,7 +592,7 @@ MiG_31 = {
 								period = 2.5,
 								phase_shift = 0.5,
 								power_up_t = 0.5,
-								proto = <5>{
+								proto = {
 									angle_max = 2.6179938779915,
 									angle_min = 1.5707963267949,
 									color = { 0, 0.894, 0.6, 0.15 },
@@ -613,7 +613,12 @@ MiG_31 = {
 								period = 2.5,
 								phase_shift = 0.5,
 								power_up_t = 0.5,
-								proto = <table 5>,
+								proto = {
+									angle_max = 2.6179938779915,
+									angle_min = 1.5707963267949,
+									color = { 0, 0.894, 0.6, 0.15 },
+									range = 40
+								},
 								range = 9,
 								reduced_flash_time = 0.45,
 								typename = "Spot"
@@ -665,7 +670,7 @@ MiG_31 = {
 						lights = { {
 								intensity_max = 2,
 								position = { 7.99, 0.792, -0.383 },
-								proto = <6>{
+								proto = {
 									angle_max = 0.7679448708775,
 									angle_min = 0.614355896702,
 									color = { 255, 201, 125, 0.2137366596101 },
@@ -680,7 +685,13 @@ MiG_31 = {
 								},
 								intensity_max = 40,
 								position = { 7.99, 0.742, -0.383 },
-								proto = <table 6>,
+								proto = {
+									angle_max = 0.7679448708775,
+									angle_min = 0.614355896702,
+									color = { 255, 201, 125, 0.2137366596101 },
+									power_up_t = 0.75,
+									range = 840
+								},
 								typename = "Spot"
 							} },
 						typename = "collection"
