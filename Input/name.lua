@@ -1,1 +1,1 @@
-return _('MiG-31')
+return _('MiG-31BM')

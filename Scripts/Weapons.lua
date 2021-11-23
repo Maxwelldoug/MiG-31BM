@@ -1,5 +1,7 @@
-                                                               --WEAPONS AND OTHER FOR SU-57--
-							--Credits go to Eagle Dynamics For the original missile Codes in which CubanAce tuned for the SU-57--
+                            --R-37 for Mig-31 BM. Originally from SU-57--
+							--Credits go to Eagle Dynamics For the original missile code which CubanAce tuned for the SU-57--
+							--Used with permission from CubanAce--
+							--Further tuned by StuntPuppy--
 															   
 local RVV_BD =   {
 		category		= CAT_AIR_TO_AIR,
@@ -39,6 +41,8 @@ local RVV_BD =   {
         Z_back = 0.0,
         Reflection = 0.081,
         KillDistance = 20.0,
+		loft = 1,
+		hoj = 1,				--	наведение на источник помех
 		ccm_k0 = 0.1,
 		shape_table_data =
 		{
@@ -117,3 +121,22 @@ local RVV_BD =   {
     }
 
 declare_weapon(RVV_BD)
+
+declare_loadout({
+	category		=	CAT_AIR_TO_AIR,
+	CLSID			= 	"{RVV-BD}",
+	Picture	=	"RVV-BD.png",
+	wsTypeOfWeapon	=	RVV_BD.wsTypeOfWeapon,
+	displayName	=	_("RVV-BD"),
+	attribute	=	{4,	4,	32,	WSTYPE_PLACEHOLDER},
+	Count			=	1,
+	Weight			=	600,
+	Elements	=	
+	{
+		{
+		
+			ShapeName	=	"RVV-BD",
+			Position	=	{0,	0,	0}
+		},
+	}, -- end of Elements
+})	
