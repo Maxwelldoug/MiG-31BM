@@ -32,7 +32,7 @@ MiG_31BM = {
 	AOA_take_off = 0.18,
 	AmmoWeight = 45.5,
 
-	HumanCockpit = false,
+	HumanCockpit = true,
 	HumanRadio = {
 		editable = true,
 		frequency = 251,
