@@ -713,5 +713,4 @@ MiG_31BM = {
 	nose_gear_wheel_diameter = 0.754,
 
 }
-
 add_aircraft(MiG_31BM)
