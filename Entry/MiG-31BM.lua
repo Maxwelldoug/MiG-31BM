@@ -1,8 +1,68 @@
-MiG_31 = {
+MiG_31BM = {
+	M_empty = 21820,
+	M_nominal = 35000,
+	M_max = 46200,
+	M_fuel_max = 15500,
+	H_max = 21000,
+	average_fuel_consumption = 0.0816,
+	Ny_max = 5,
+	Ny_max_e = 5,
+	Ny_min = -2,
+	Picture = "MiG-31.png",
+	CanopyGeometry = { -0.17364817766693, -0.49640011097796, -0.81915204428899, 0.023436679747723, 0.86602540378444 },
+	V_opt = 280,
+	V_take_off = 72,
+	V_land = 72,
+	V_max_h = 835.07,
+	V_max_sea_level = 418.429,
+	CAS_min = 68,
+	Vy_max = 250,
+	radar_can_see_ground = true,
+	range = 2400,
+	stores_number = 6,
+	swapped_names = true,
+	tand_gear_max = 0.577,
+	tanker_type = 4,
+	thrust_sum_ab = 30380,
+	thrust_sum_max = 18260,
+	type = "MiG-31BM",
+	wing_area = 61.6,
+	wing_span = 13.46,
+	wing_tip_pos = { -6.5, 0.1, 6.8 },
 	AOA_take_off = 0.18,
 	AmmoWeight = 45.5,
-	CAS_min = 68,
-	CanopyGeometry = { -0.17364817766693, -0.49640011097796, -0.81915204428899, 0.023436679747723, 0.86602540378444 },
+
+	HumanCockpit = true,
+	HumanRadio = {
+		editable = true,
+		frequency = 251,
+		maxFrequency = 399.975,
+		minFrequency = 225,
+		modulation = 0
+	},
+	IR_emission_coeff = 3,
+	IR_emission_coeff_ab = 6,
+
+	Mach_max = 2.83,
+	MaxFuelWeight = "15500",
+	MaxHeight = "20000",
+	MaxSpeed = "3000",
+	MaxTakeOffWeight = "46200",
+	Name = "MiG-31BM",
+	
+	Waypoint_Custom_Panel = true,
+	WingSpan = "13.46",
+	WorldID = WSTYPE_PLACEHOLDER,
+	air_refuel_receptacle_pos = { 7.8658, 1.05078, -0.7762 },
+	attribute = { 1, 1, 3, "Redacted", "Interceptors", "Refuelable", "All", "NonAndLightArmoredUnits", "NonArmoredUnits", "Air", "Planes", "Battle airplanes" },
+	average_fuel_consumption = 0.0816,
+	bank_angle_max = 60,
+	bigParkingRamp = false,
+	brakeshute_name = 4,
+	country_of_origin = "RUS",
+	DisplayName = "MiG-31BM",
+	EmptyWeight = "21820",
+	
 	Categories = {
         {CLSID = "{78EFB7A2-FD52-4b57-A6A6-3BF0E1D6555F}", Name = "Interceptor"}
                  },
@@ -132,152 +192,24 @@ MiG_31 = {
 		OldID = "Intercept",
 		WorldID = 10
 	},
-	DisplayName = "MiG-31",
-	EmptyWeight = "21820",
-	Guns = { {
-			aft_gun_mount = false,
-			azimuth_initial = 0,
-			display_name = "GSh-6-23",
-			drop_cartridge = 0,
-			effective_fire_distance = 1500,
-			effects = { {
-					arg = 351,
-					barrels_n = 6,
-					name = "GatlingEffect"
-				}, {
-					arg = 350,
-					attenuation = 2,
-					duration = 0.02,
-					light_pos = { 0.5, 0, 0 },
-					name = "FireEffect"
-				}, {
-					name = "SmokeEffect"
-				} },
-			ejector_dir = { -2, -5, 0 },
-			ejector_pos = { -0.5, -0.5, 0 },
-			elevation_initial = 0,
-			gun = {
-				impulse_vec_rot = {
-					x = 0,
-					y = 0,
-					z = 0
-				},
-				max_burst_length = 100000,
-				rates = { 9000 },
-				recoil_coeff = 0.91,
-				trigger = {
-					name = "GunTrigger"
-				}
+	Guns = {
+        gun_mount('GSh_23_6', { count = 800 }, 
+                    {
+					muzzle_pos = { -0.125, -0.458, 1.75},
+                    muzzle_pos_connector = "Gun_point",
+                    elevation_initial = 0.0,
+                    drop_cartridge = 0,
+                    ejector_dir = {-2, -5, 0},
+                	}
+                 ),
+    },
+	Pylons = { 
+		{
+			Launchers = { 
+				{CLSID = "{4EDBA993-2E34-444C-95FB-549300BF7CAF}"}, 
+				{CLSID = "{5F26DBC2-FB43-4153-92DE-6BBCE26CB0FF}"}, 
+				{CLSID = "{B0DBC591-0F52-4F7D-AD7B-51E67725FB81}"},
 			},
-			muzzle_pos = { -0.125, -0.458, 1.75 },
-			muzzle_pos_connector = "Gun_point",
-			short_name = "GSh_23_6",
-			supply = {
-				count = 800,
-				shells = { {
-						AP_cap_caliber = 23,
-						Da0 = 0.0007,
-						Da1 = 0,
-						Dv0 = 0.005,
-						_unique_resource_name = "weapons.shells.GSH23_23_AP",
-						caliber = 23,
-						cartridge = 0,
-						cartridge_mass = 0,
-						charTime = 0,
-						cumulative_mass = 0,
-						cumulative_thickness = 0,
-						cx = { 1, 0.74, 0.65, 0.15, 1.78 },
-						damage_factor = 700,
-						display_name = "23mm AP",
-						explosive = 0,
-						full_scale_time = -1,
-						j = 0,
-						k1 = 2.3e-08,
-						l = 0,
-						life_time = 6,
-						mass = 0.175,
-						model_name = "tracer_bullet_yellow",
-						name = "GSH23_23_AP",
-						payload = 0,
-						piercing_mass = 0.175,
-						rebound_concrete = {
-							angle0 = 50,
-							angle100 = 75,
-							cx_factor = 5,
-							deviation_angle = 30,
-							velocity_loss_factor = 0.5
-						},
-						rebound_ground = {
-							angle0 = 55,
-							angle100 = 73,
-							cx_factor = 5,
-							deviation_angle = 30,
-							velocity_loss_factor = 0.5
-						},
-						rebound_object = {
-							angle0 = 50,
-							angle100 = 75,
-							cx_factor = 5,
-							deviation_angle = 30,
-							velocity_loss_factor = 0.5
-						},
-						rebound_water = {
-							angle0 = 65,
-							angle100 = 83,
-							cx_factor = 5,
-							deviation_angle = 30,
-							velocity_loss_factor = 0.5
-						},
-						rotation_freq = 7,
-						round_mass = 0.175,
-						s = 0,
-						scale_tracer = 1,
-						silent_self_destruction = false,
-						smoke_tail_life_time = -1,
-						subcalibre = false,
-						tracer_off = 0,
-						tracer_on = 0.01,
-						type_name = "shell",
-						v0 = 715,
-						visual_effect_correction = 0,
-						visual_effect_correction_rebound = 0.1
-					} }
-			},
-			supply_position = { 0, 0, 0 }
-		} },
-	H_max = 21000,
-	HumanCockpit = false,
-	HumanRadio = {
-		editable = true,
-		frequency = 251,
-		maxFrequency = 399.975,
-		minFrequency = 225,
-		modulation = 0
-	},
-	IR_emission_coeff = 3,
-	IR_emission_coeff_ab = 6,
-	M_empty = 21820,
-	M_fuel_max = 15500,
-	M_max = 46200,
-	M_nominal = 35000,
-	Mach_max = 2.83,
-	MaxFuelWeight = "15500",
-	MaxHeight = "20000",
-	MaxSpeed = "3000",
-	MaxTakeOffWeight = "46200",
-	Name = "MiG-31",
-	Ny_max = 5,
-	Ny_max_e = 5,
-	Ny_min = -2,
-	Picture = "MiG-31.png",
-	Pylons = { {
-			Launchers = { {
-					CLSID = "{4EDBA993-2E34-444C-95FB-549300BF7CAF}"
-				}, {
-					CLSID = "{5F26DBC2-FB43-4153-92DE-6BBCE26CB0FF}"
-				}, {
-					CLSID = "{B0DBC591-0F52-4F7D-AD7B-51E67725FB81}"
-				} },
 			Number = 1,
 			Order = 1,
 			Type = 0,
@@ -286,7 +218,9 @@ MiG_31 = {
 			Z = -3.470583,
 			connector = "Point Zero 02",
 			use_full_connector_position = true
-		}, {
+		}, 
+		
+		{
 			Launchers = { {
 					CLSID = "{F1243568-8EF0-49D4-9CB5-4DA90D92BC1D}"
 				} },
@@ -298,7 +232,9 @@ MiG_31 = {
 			Z = -0.473283,
 			connector = "Point Zero 03",
 			use_full_connector_position = true
-		}, {
+		}, 
+		
+		{
 			Launchers = { {
 					CLSID = "{F1243568-8EF0-49D4-9CB5-4DA90D92BC1D}"
 				} },
@@ -310,10 +246,12 @@ MiG_31 = {
 			Z = -0.473283,
 			connector = "Point Zero 04",
 			use_full_connector_position = true
-		}, {
-			Launchers = { {
-					CLSID = "{F1243568-8EF0-49D4-9CB5-4DA90D92BC1D}"
-				} },
+		}, 
+		{
+			Launchers = { 
+				{CLSID = "{F1243568-8EF0-49D4-9CB5-4DA90D92BC1D}"},
+				{CLSID = "{RVV-BD}"},		
+		},
 			Number = 4,
 			Order = 4,
 			Type = 1,
@@ -322,10 +260,9 @@ MiG_31 = {
 			Z = 0.472034,
 			connector = "Point Zero 05",
 			use_full_connector_position = true
-		}, {
-			Launchers = { {
-					CLSID = "{F1243568-8EF0-49D4-9CB5-4DA90D92BC1D}"
-				} },
+		}, 
+		{
+			Launchers = { {CLSID = "{F1243568-8EF0-49D4-9CB5-4DA90D92BC1D}"} },
 			Number = 5,
 			Order = 5,
 			Type = 1,
@@ -385,7 +322,7 @@ MiG_31 = {
                 { 2.2, 0.032, 0.034, 0.458, 1e-05, 0.7, 9, 0.4 },
                 { 2.5, 0.028, 0.033, 0.515, 1e-05, 0.7, 9, 0.4 },
                 { 3, 0.025, 0.033, 0.61, 1e-05, 0.7, 9, 0.4 },
-                { 3.9, 0.025, 0.033, 0.61, 1e-05, 0.7, 9, 0.4 }
+                { 3.9, 0.025, 0.033, 0.61, 1e-05, 0.7, 9, 0.4 },
             }
 		},
 		engine = {
@@ -402,7 +339,25 @@ MiG_31 = {
 			dpdh_f = 18500,
 			dpdh_m = 6500,
 			hMaxEng = 19,
-			table_data = { { 0, 240000, 303800 }, { 0.2, 213000, 305000 }, { 0.4, 190000, 300000 }, { 0.6, 170000, 302000 }, { 0.7, 160000, 310000 }, { 0.8, 147000, 317000 }, { 0.9, 135000, 325000 }, { 1, 124000, 337000 }, { 1.1, 115000, 343000 }, { 1.2, 112000, 350000 }, { 1.3, 107000, 357000 }, { 1.5, 92000, 374000 }, { 1.8, 78000, 406000 }, { 2, 56000, 432000 }, { 2.2, 52000, 450000 }, { 2.515, 43000, 440000 }, { 3, 25000, 432000 } },
+			table_data = { 
+							{ 0, 240000, 303800 }, 
+						   	{ 0.2, 213000, 305000 }, 
+						   	{ 0.4, 190000, 300000 }, 
+						   	{ 0.6, 170000, 302000 }, 
+						   	{ 0.7, 160000, 310000 }, 
+						   	{ 0.8, 147000, 317000 }, 
+						   	{ 0.9, 135000, 325000 }, 
+						   	{ 1, 124000, 337000 }, 
+						   	{ 1.1, 115000, 343000 }, 
+						   	{ 1.2, 112000, 350000 }, 
+						   	{ 1.3, 107000, 357000 }, 
+						   	{ 1.5, 92000, 374000 }, 
+						   	{ 1.8, 78000, 406000 }, 
+						   	{ 2, 56000, 432000 }, 
+						   	{ 2.2, 52000, 450000 }, 
+						   	{ 2.515, 43000, 440000 }, 
+						   	{ 3, 25000, 432000 }, 
+						},	
 			type = "TurboJet"
 		}
 	},
@@ -414,7 +369,7 @@ MiG_31 = {
     Countermeasures = {
         ECM = "Gardenia"
         },
-		-- Countermeasures
+	--Chaff and Flare
     passivCounterm = {
 	CMDS_Edit = true,
 	SingleChargeTotal = 128,
@@ -422,7 +377,8 @@ MiG_31 = {
 	chaff = {default = 64, increment = 3, chargeSz = 1},
 	-- PPI-26
 	flare = {default = 64, increment = 3, chargeSz = 1}
-	    },
+	    
+	},
 	Shape = "MiG-31",
 	Tasks = { {
 			Name = "CAP",
@@ -440,62 +396,54 @@ MiG_31 = {
 			Name = "Intercept",
 			OldID = "Intercept",
 			WorldID = 10
-		}, },
-	V_land = 72,
-	V_max_h = 833.33,
-	V_max_sea_level = 300,
-	V_opt = 280,
-	V_take_off = 72,
-	Vy_max = 250,
-	Waypoint_Custom_Panel = true,
-	WingSpan = "13.46",
-	WorldID = 9,
-	air_refuel_receptacle_pos = { 7.8658, 1.05078, -0.7762 },
-	attribute = { 1, 1, 3, "Redacted", "Interceptors", "Refuelable", "All", "NonAndLightArmoredUnits", "NonArmoredUnits", "Air", "Planes", "Battle airplanes" },
-	average_fuel_consumption = 0.0816,
-	bank_angle_max = 60,
-	bigParkingRamp = false,
-	brakeshute_name = 4,
-	country_of_origin = "RUS",
-	crew_members = { {
-			canopy_pos = { 0, 0, 0 },
+		}, 
+	},
+
+	crew_members = { 
+			{canopy_pos = { 0, 0, 0 },
 			drop_canopy_name = 30,
 			ejection_seat_name = 9,
 			pos = { 5.68, 0.65, 0 },
 			role = "pilot",
-			role_display_name = "Pilot in command"
-		}, {
-			canopy_arg = 421,
+			role_display_name = "Pilot in command"},
+			
+			{canopy_arg = 421,
 			canopy_pos = { 0, 0, 0 },
 			drop_canopy_name = 31,
 			ejection_seat_name = 9,
 			pos = { 4.18, 0.615, 0 },
 			role = "copilot",
-			role_display_name = "Copilot"
-		} },
-	detection_range_max = 350,
+			role_display_name = "Copilot"},
+	},
 	engines_count = 2,
-	engines_nozzles = { {
-			diameter = 1.242,
+	engines_nozzles = { 
+			{diameter = 1.242,
 			elevation = 0,
 			exhaust_length_ab = 13.497,
 			exhaust_length_ab_K = 0.76,
 			pos = { -8.533, 0.045, -0.729 },
-			smokiness_level = 0.3
-		}, {
-			diameter = 1.242,
+			smokiness_level = 0.3}, 
+			
+			{diameter = 1.242,
 			elevation = 0,
 			exhaust_length_ab = 13.497,
 			exhaust_length_ab_K = 0.76,
 			pos = { -8.533, 0.045, 0.729 },
-			smokiness_level = 0.3
-		} },
-	fires_pos = { { -2.351, -0.696, 0 }, { -0.681, 0.749, 1.649 }, { -0.681, 0.749, -1.649 }, { -0.82, 0.265, 2.774 }, { -0.82, 0.265, -2.774 }, { -0.82, 0.255, 4.274 }, { -0.82, 0.255, -4.274 }, { -7.828, 0.051, 0.73 }, { -7.828, 0.051, -0.73 }, { -2.84, 0.549, 2.6 }, { -2.84, 0.549, -2.6 } },
-	flaps_maneuver = 1,
-	has_afteburner = true,
-	has_speedbrake = true,
-	height = 6.15,
-	length = 22.7,
+			smokiness_level = 0.3},
+	},
+	fires_pos = { 
+		{ -2.351, -0.696, 0 }, 
+		{ -0.681, 0.749, 1.649 }, 
+		{ -0.681, 0.749, -1.649 }, 
+		{ -0.82, 0.265, 2.774 }, 
+		{ -0.82, 0.265, -2.774 }, 
+		{ -0.82, 0.255, 4.274 }, 
+		{ -0.82, 0.255, -4.274 }, 
+		{ -7.828, 0.051, 0.73 }, 
+		{ -7.828, 0.051, -0.73 }, 
+		{ -2.84, 0.549, 2.6 }, 
+		{ -2.84, 0.549, -2.6 } 
+	},
 	lights_data = {
 		lights = {
 			[2] = {
@@ -763,16 +711,7 @@ MiG_31 = {
 	},
 	nose_gear_pos = { 6.133, -2.496, 0 },
 	nose_gear_wheel_diameter = 0.754,
-	radar_can_see_ground = true,
-	range = 2400,
-	stores_number = 6,
-	swapped_names = true,
-	tand_gear_max = 0.577,
-	tanker_type = 4,
-	thrust_sum_ab = 30380,
-	thrust_sum_max = 18260,
-	type = "MiG-31",
-	wing_area = 61.6,
-	wing_span = 13.46,
-	wing_tip_pos = { -6.5, 0.1, 6.8 }
+
 }
+
+add_aircraft(MiG_31BM)
