@@ -1,4 +1,6 @@
 MiG_31BM = {
+	Name = "MiG-31BM",
+	DisplayName = _("MiG-31BM"),
 	M_empty = 21820,
 	M_nominal = 35000,
 	M_max = 46200,
@@ -48,7 +50,6 @@ MiG_31BM = {
 	MaxHeight = "20000",
 	MaxSpeed = "3000",
 	MaxTakeOffWeight = "46200",
-	Name = "MiG-31BM",
 	
 	Waypoint_Custom_Panel = true,
 	WingSpan = "13.46",
@@ -60,7 +61,6 @@ MiG_31BM = {
 	bigParkingRamp = false,
 	brakeshute_name = 4,
 	country_of_origin = "RUS",
-	DisplayName = "MiG-31BM",
 	EmptyWeight = "21820",
 	
 	Categories = {
@@ -713,5 +713,4 @@ MiG_31BM = {
 	nose_gear_wheel_diameter = 0.754,
 
 }
-
 add_aircraft(MiG_31BM)
