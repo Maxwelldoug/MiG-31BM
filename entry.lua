@@ -42,7 +42,7 @@ InputProfiles =
 mount_vfs_texture_path(current_mod_path.."/Theme/ME")--for simulator loading window
 mount_vfs_model_path	(current_mod_path.."/Shapes")
 mount_vfs_model_path    (current_mod_path.."/Cockpit/Shape")
-mount_vfs_texture_path  (current_mod_path.."/Cockpit/Textures/MiG-31-CPT-TEXTURES")
+mount_vfs_texture_path  (current_mod_path.."/Cockpit/Textures/MiG-31BM-CPT-TEXTURES")
 mount_vfs_liveries_path (current_mod_path.."/Liveries")
 ----------------------------------------------------------------------------------------
 make_flyable('MiG-31BM', current_mod_path..'/Cockpit/KneeboardRight/',{nil, old = 4}, current_mod_path..'/Entry/comm.lua')
