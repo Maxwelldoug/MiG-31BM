@@ -36,7 +36,7 @@ LogBook =
 	},	
 InputProfiles =
 	{
-		["MiG-31BM"] = current_mod_path .. '/Input',
+		["mig-31bm"] = current_mod_path .. '/Input',
 	},
 })
 mount_vfs_texture_path(current_mod_path.."/Theme/ME")--for simulator loading window
